@@ -1,5 +1,5 @@
 // オフライン用：初回アクセス時に全ファイルを保存し、以降は保存した物から表示する
-const CACHE = 'bigtimer-v1';
+const CACHE = 'bigtimer-v2';
 const FILES = ['./', './index.html', './manifest.webmanifest', './icon-180.png', './icon-192.png', './icon-512.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES))); self.skipWaiting(); });
 self.addEventListener('activate', e => {
